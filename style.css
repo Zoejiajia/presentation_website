@@ -3,7 +3,7 @@
   --page-2-color: #CCCCFF;
   --page-3-color: #F5DEB3;
   --page-4-color: #5F9EA0;
-  --animate-speed: 1s;
+  --animate-speed: 2s;
 }
 
 body {
@@ -39,5 +39,61 @@ body {
 
 .page p {
   font-size: 1.3rem;
-  
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #F9F6EE;
+  color: #36454F;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover, .btn-dark {
+  background: #36454F;
+  color: #F9F6EE;
+}
+
+.btn-dark:hover {
+  background: #F9F6EE;
+  color: #36454F;
+}
+
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in-out;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: paragraph var(--animate-speed) forwards 1s ease-in-out;
+}
+
+#page-1 .btn {
+  transform: translateY(1200px);
+  animation: button var(--animate-speed) forwards 2s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes button {
+  to {
+    transform: translateY(0);
+  }
 }
