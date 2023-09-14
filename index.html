@@ -57,5 +57,44 @@
       </a>
     </div>
   </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    //Smooth Scrolling
+    $('.btn').on('click', function(event) {
+      if (this.hash !== '') {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800
+        );
+      }
+    });
+  </script>
+
+  
+  <!-- <script>
+  const buttons = document.querySelectorAll(".btn");
+
+  buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+  const hash = event.currentTarget.hash;
+  if (hash !== "") {
+  event.preventDefault();
+  const targetElement = document.querySelector(hash);
+  const offsetTop = targetElement.offsetTop;
+
+  window.scrollTo({
+  top: offsetTop,
+  behavior: "smooth",
+  });
+  }
+  });
+  }); -->
+  </script>
 </body>
 </html>
